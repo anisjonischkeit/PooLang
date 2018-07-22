@@ -52,8 +52,7 @@ rerouteResponse originalRequest localSite foreignSite = do
 
     return $ Wai.responseLBS
         status200
-        ([])
-        --(NC.responseHeaders response)
+        ([]) -- This should be replaced with some of php's response headers (ie. Content-Type) 
         (rewritePage 
             (NC.responseBody response)
             localSite
