@@ -2,3 +2,9 @@ version: '3'
 services:
   webapp:
     build: ./
+    ports:
+      - "8081:8081"
+
+    environment:
+      LOCAL_SITE: localhost:8081
+      FOREIGN_SITE: php.net
