@@ -1,4 +1,5 @@
 # Make sure to set the HEROKU_API_KEY environment variable in travis.
+# Use heroku authorizations:create to generate a long-term token
 
 services:
   - docker
