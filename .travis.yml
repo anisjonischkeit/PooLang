@@ -7,7 +7,6 @@ services:
 sudo: false
 
 script:
-  - ls
   - heroku container:login
-  - heroku container:push web
-  - heroku container:release web
+  - heroku container:push web --app poolang
+  - heroku container:release web --app poolang
