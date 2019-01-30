@@ -1,4 +1,4 @@
-FROM haskell:8
+FROM haskell:8.6.3
 
 COPY . /opt/server
 WORKDIR /opt/server

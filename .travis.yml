@@ -1,0 +1,11 @@
+# Make sure to set the HEROKU_API_KEY environment variable in travis.
+
+services:
+  - docker
+
+sudo: false
+
+script:
+  - heroku container:login
+  - heroku container:push web --app poolang
+  - heroku container:release web --app poolang

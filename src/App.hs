@@ -81,5 +81,6 @@ app request respond = do
 
 run :: IO ()
 run = do
-    Prelude.putStrLn $ "http://localhost:8080/"
-    Warp.run 8080 app
+    port <- getEnv "PORT"
+    Prelude.putStrLn $ "http://localhost:" ++ port
+    Warp.run (read 8080) app
