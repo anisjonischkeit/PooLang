@@ -6,6 +6,10 @@ services:
 
 sudo: false
 
+env:
+  LOCAL_SITE: poolang.co
+  FOREIGN_SITE: php.net
+
 script:
   - heroku container:login
   - heroku container:push web --app poolang
